@@ -1,16 +1,29 @@
-# This is a sample Python script.
+def isPrime(num):
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+    if num > 1:
+        # Iterate from 2 to n / 2
+        for i in range(2, int(num/2)+1) :
+
+            # If num is divisible by any number between
+            # 2 and n / 2, it is not prime
+            if (num % i) == 0:
+                return False
+                break
+            else :
+                continue
+        else:
+            return True
+    else:
+        return False
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    num_in = int(input("Enter Number : "))
+    result = isPrime(num_in)
+    print(result)
+else :
+    print("wrong file")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
