@@ -18,7 +18,7 @@ def isPrime(num):
 
 
 if __name__ == '__main__':
-    num_in = int(input("Enter Number : "))
+    num_in = int(input("Enter the Number : "))
     result = isPrime(num_in)
     print(result)
 else :
